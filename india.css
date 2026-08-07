@@ -1,0 +1,66 @@
+/* General page styling */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9; /* light grey */
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #ff9933, #ffffff, #138808); /* saffron-white-green */
+  color: #000080; /* navy blue chakra accent */
+  text-align: center;
+  padding: 30px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+/* Sections */
+section {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #ff9933; /* saffron accent */
+  margin-bottom: 12px;
+}
+
+/* Lists */
+ul {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: #138808; /* green */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+footer h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+footer p {
+  margin: 8px 0 0;
+}

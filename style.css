@@ -1,0 +1,149 @@
+/* General page styling */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  color: #333;
+}
+
+/* Top heading */
+.me {
+  text-align: center;
+  font-size: 3rem;
+  color: #0d6efd;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Main heading */
+h1 {
+  text-align: center;
+  color: #dc3545;
+  margin-bottom: 20px;
+}
+
+/* Sidebar menu */
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #1a73e8;
+  padding-top: 60px;
+  transition: 0.3s;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background: #0d6efd;
+  padding-left: 25px;
+}
+
+/* Hide the checkbox itself */
+#check {
+  display: none;
+}
+
+/* Menu icon (=) styling */
+.menu {
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: #1a73e8;
+  background: #fff;
+  padding: 4px 8px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1100;
+}
+
+/* Close button styling */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Checkbox toggle effect */
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+/* Overlay effect */
+.overlay {
+  display: none;
+}
+
+#check:checked ~ .overlay {
+  display: block;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 900;
+}
+
+/* Header image */
+.header img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  max-width: 90%;
+}
+
+/* Paragraphs */
+p {
+  max-width: 900px;
+  margin: 15px auto;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  line-height: 1.7;
+}
+
+/* Headings inside content */
+h2, h3, h4, h5, h6 {
+  max-width: 900px;
+  margin: 20px auto 10px;
+  color: #1a73e8;
+}
+
+/* Tables */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 90%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #0d6efd;
+  color: #fff;
+}
