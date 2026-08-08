@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us — SU80</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --accent:#0d6efd;
+      --muted:#55606a;
+      --text:#0b2545;
+      --radius:10px;
+      --shadow:0 6px 18px rgba(10,20,40,0.06);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+      padding:20px;
+    }
+    header{max-width:1100px;margin:18px auto 12px;text-align:center}
+    header h1{margin:0;font-size:1.9rem;color:#051524}
+    main{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:16px}
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    h2{margin-top:0;color:var(--text)}
+    p{margin:10px 0;color:var(--muted)}
+    .grid-2{display:grid;grid-template-columns:1fr 320px;gap:16px}
+    @media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+    .values{display:flex;flex-wrap:wrap;gap:10px}
+    .value{flex:1 1 200px;background:#f8fbff;border-left:4px solid var(--accent);padding:12px;border-radius:8px}
+    .team-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px}
+    .member{display:flex;gap:12px;align-items:center;padding:10px;border-radius:8px;background:#fbfdff}
+    .member img{width:64px;height:64px;border-radius:8px;object-fit:cover}
+    .member .meta{font-size:0.95rem}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{border:1px solid #e6eef8;padding:8px;text-align:left}
+    th{background:var(--accent);color:#fff}
+    .contact{display:flex;flex-direction:column;gap:8px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;font-weight:600}
+    footer{max-width:1100px;margin:8px auto 24px;text-align:center;color:var(--muted);font-size:0.95rem}
+    .small { font-size:0.95rem; color:var(--muted) }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About SU80</h1>
+    <p style="margin-top:8px;color:var(--muted)">Built and maintained by Subodeep Sengupta — focused on clear, syllabus-aligned math learning for Class 10–12.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Who we are</h2>
+      <p>
+        <strong>SU80</strong> is an educational web project created to make mathematics approachable and exam-ready for students in Classes 10, 11, and 12.
+        The site provides concise notes, worked examples, practice problems, quick-reference tables, and short embedded lessons so learners can study efficiently.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Founder & Developer</h2>
+      <div class="member" style="background:#fff;padding:14px;">
+        <img src="avatar-subodeep.jpg" alt="Subodeep Sengupta">
+        <div class="meta">
+          <div><strong>Subodeep Sengupta</strong></div>
+          <div class="small">Founder, Lead Developer & Content Curator — SU80</div>
+          <div style="margin-top:6px;color:var(--muted)">I build the site, structure lessons, and curate short videos and practice sets aligned to standard Class 10–12 syllabuses.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Mission</h2>
+      <p>
+        Our mission is to make mathematics clear, practical, and accessible. We focus on step-by-step explanations, worked examples, and short videos so students can learn concepts quickly and apply them in exams and projects.
+      </p>
+    </section>
+
+    <section class="card grid-2">
+      <div>
+        <h2>What we offer</h2>
+        <ul>
+          <li><strong>Topic pages</strong> for Trigonometry, Algebra, Calculus, and Number Systems with syllabus-aligned content.</li>
+          <li><strong>Embedded lessons</strong> — short videos and worked examples playable on the site.</li>
+          <li><strong>Practice problems</strong> with step-by-step solutions and quick reference tables.</li>
+          <li><strong>Responsive design</strong> so lessons work on phones, tablets, and desktops.</li>
+        </ul>
+
+        <h2 style="margin-top:14px">How to use SU80</h2>
+        <ol>
+          <li>Open a topic from the navigation bar.</li>
+          <li>Choose the class level (10 / 11 / 12) that matches your syllabus.</li>
+          <li>Watch the short concept video, then try the worked examples and practice problems.</li>
+        </ol>
+      </div>
+
+      <aside class="card" style="padding:12px">
+        <h2>Contact</h2>
+        <div class="contact">
+          <div><strong>Email</strong><br><a href="mailto:hello@su80.example" class="small">hello@su80.example</a></div>
+          <div><strong>Website</strong><br><a href="https://su80.example" class="small">https://su80.example</a></div>
+          <div><strong>Contribute</strong><br><span class="small">Want to suggest a lesson or video? Email with topic and class level.</span></div>
+          <a class="btn" href="mailto:hello@su80.example">Send a message</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card">
+      <h2>Core Values</h2>
+      <div class="values">
+        <div class="value"><strong>Clarity</strong><div style="color:var(--muted);margin-top:6px">Step-by-step explanations and worked examples.</div></div>
+        <div class="value"><strong>Practicality</strong><div style="color:var(--muted);margin-top:6px">Exam-focused techniques and real problems.</div></div>
+        <div class="value"><strong>Consistency</strong><div style="color:var(--muted);margin-top:6px">Structured lessons across Class 10–12.</div></div>
+        <div class="value"><strong>Accessibility</strong><div style="color:var(--muted);margin-top:6px">Short videos and readable notes for every learner.</div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Team & Contributors</h2>
+      <p class="small">SU80 is currently led by Subodeep Sengupta. We welcome volunteer contributors — teachers, tutors, and experienced students — who can submit lesson drafts, solved problems, or short videos.</p>
+
+      <div class="team-list" style="margin-top:12px">
+        <div class="member">
+          <img src="avatar-subodeep.jpg" alt="Subodeep Sengupta">
+          <div class="meta">
+            <div><strong>Subodeep Sengupta</strong></div>
+            <div class="small">Founder & Developer — SU80</div>
+          </div>
+        </div>
+
+        <!-- Add more team members here as contributors join -->
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Privacy & Use</h2>
+      <p class="small">We respect learner privacy. We do not sell personal data. For details about data handling and cookies, include a link to your privacy policy from the site footer.</p>
+
+      <h2 style="margin-top:12px">Get involved</h2>
+      <p class="small">Teachers and experienced students can contribute lesson drafts, solved problems, or short videos. Email us with a short proposal and sample content.</p>
+    </section>
+  </main>
+
+  <footer>
+    © <strong>SU80</strong> — Built and maintained by Subodeep Sengupta. All rights reserved.
+  </footer>
+</body>
+</html>

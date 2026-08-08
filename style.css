@@ -4,24 +4,27 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: #f0f2f5;
-  color: #333;
+  background: #464768ea;
+  color: #000000;
 }
 
 /* Top heading */
 .me {
   text-align: center;
   font-size: 3rem;
-  color: #0d6efd;
+  color: #00122c;
   margin-top: 20px;
   font-weight: bold;
+  text-decoration:wavy;
 }
 
 /* Main heading */
 h1 {
   text-align: center;
-  color: #dc3545;
+  color: #f5f3f3;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  text-decoration:dotted;
 }
 
 /* Sidebar menu */
@@ -31,7 +34,7 @@ h1 {
   top: 0;
   width: 250px;
   height: 100%;
-  background: #1a73e8;
+  background: #50698a;
   padding-top: 60px;
   transition: 0.3s;
   box-shadow: 2px 0 8px rgba(0,0,0,0.2);
@@ -41,34 +44,28 @@ h1 {
 .sidebar a {
   display: block;
   color: #fff;
-  padding: 15px;
+  padding: 6px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.2s;
 }
 
 .sidebar a:hover {
-  background: #0d6efd;
+  background: #223b61;
   padding-left: 25px;
 }
 
-/* Hide the checkbox itself */
-#check {
-  display: none;
-}
+
 
 /* Menu icon (=) styling */
 .menu {
   font-size: 2rem;
   cursor: pointer;
   position: fixed;
-  top: 20px;
-  left: 20px;
-  color: #1a73e8;
-  background: #fff;
-  padding: 4px 8px;
-  border-radius: 3px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  top: 10px;
+  left: 10px;
+  color: #c4ccd6;
+  background: #130b0b;
   z-index: 1100;
 }
 
@@ -125,7 +122,7 @@ p {
 h2, h3, h4, h5, h6 {
   max-width: 900px;
   margin: 20px auto 10px;
-  color: #1a73e8;
+  color: #051524;
 }
 
 /* Tables */
@@ -147,3 +144,37 @@ th {
   background: #0d6efd;
   color: #fff;
 }
+#check {
+  display: none;
+  
+}
+/* Navigation bar */
+nav {
+  background: #223b61;   /* dark blue background */
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;          /* horizontal layout */
+  justify-content: center;
+  gap: 20px;              /* spacing between items */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size:small;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background: #0d6efd;    /* blue hover accent */
+  color: #fff;
+}
+

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Algebra (Class 10–12)</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Page layout */
+    :root {
+      --card-bg: #dfe0eb;
+      --page-bg: #f4f7fb;
+      --accent: #0d6efd;
+      --text: #0b2545;
+      --muted: #4b5563;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--page-bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 18px;
+    }
+    header h1 {
+      text-align: center;
+      font-size: 1.9rem;
+      margin: 8px 0 18px;
+      color:black;
+    }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    section.card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(10,20,40,0.06);
+      margin-bottom: 18px;
+    }
+    h2 { margin-top: 0; color: var(--text); }
+    ul { margin-left: 1.1rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid #e6eef8; padding: 10px; text-align: left; vertical-align: top; }
+    th { background: var(--accent); color: #fff; }
+    .video-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
+    .video {
+      flex: 1 1 320px;
+      min-width: 260px;
+      background:#f8fafc;
+      border-radius:8px;
+      padding:8px;
+    }
+    .responsive-iframe { position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:6px; }
+    .responsive-iframe iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+    pre.code { background:#0b2545; color:#fff; padding:12px; border-radius:6px; overflow:auto; }
+    details { margin-top:10px; }
+    summary { cursor:pointer; font-weight:600; }
+    .muted { color: var(--muted); font-size:0.95rem; }
+    @media (max-width:600px) {
+      body { padding:12px; }
+      header h1 { font-size:1.4rem; }
+    }
+  </style>
+
+  <!-- Optional: MathJax for rendering LaTeX formulas -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🧮 Algebra (Class 10–12)</h1>
+  </header>
+
+  <main>
+    <!-- Introduction -->
+    <section class="card">
+      <h2>Introduction</h2>
+      <p>
+        Algebra studies symbols and the rules for manipulating those symbols. It provides the language and tools for solving equations, modeling relationships, and preparing for higher mathematics. This page is organized by syllabus level so students from Class 10, 11, and 12 can find focused lessons, formulas, worked examples, practice problems, and embedded videos.
+      </p>
+    </section>
+
+    <!-- Class 10 -->
+    <section class="card">
+      <h2>Class 10 Topics</h2>
+      <ul>
+        <li><strong>Polynomials:</strong> degree, zeroes, factorization, Remainder and Factor Theorems.</li>
+        <li><strong>Linear equations:</strong> solving single-variable and simple systems; word problems.</li>
+        <li><strong>Quadratic equations:</strong> standard form, discriminant, roots (factorization, completing square, quadratic formula).</li>
+        <li><strong>Arithmetic progressions (AP):</strong> nth term, sum of first n terms.</li>
+        <li><strong>Basic inequalities:</strong> solving and interpreting simple linear inequalities.</li>
+      </ul>
+
+      <h3>Class 10 Video Lessons</h3>
+      <div class="video-row">
+        <div class="video">
+          <div class="responsive-iframe">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_ALG_10_1" title="Polynomials and Factorization (Class 10)" allowfullscreen></iframe>
+          </div>
+          <p class="muted">Polynomials & Factor Theorem</p>
+        </div>
+
+        <div class="video">
+          <div class="responsive-iframe">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_ALG_10_2" title="Quadratic Equations (Class 10)" allowfullscreen></iframe>
+          </div>
+          <p class="muted">Quadratic formula, completing the square</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Class 11 -->
+    <section class="card">
+      <h2>Class 11 Topics</h2>
+      <ul>
+        <li><strong>Relations and functions:</strong> domain, range, types of functions (linear, polynomial, rational).</li>
+        <li><strong>Sequences and series:</strong> AP, GP, sum formulas, convergence basics.</li>
+        <li><strong>Complex numbers:</strong> a + bi form, modulus, conjugate, polar form introduction.</li>
+        <li><strong>Binomial theorem:</strong> expansion for positive integer powers, binomial coefficients.</li>
+        <li><strong>Matrices and determinants (intro):</strong> basic operations, 2×2 determinants, solving linear systems using determinants (Cramer's rule).</li>
+      </ul>
+
+      <h3>Class 11 Video Lessons</h3>
+      <div class="video-row">
+        <div class="video">
+          <div class="responsive-iframe">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_ALG_11_1" title="Functions and Graphs (Class 11)" allowfullscreen></iframe>
+          </div>
+          <p class="muted">Functions, domain & range</p>
+        </div>
+
+        <div class="video">
+          <div class="responsive-iframe">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_ALG_11_2" title="Complex Numbers (Class 11)" allowfullscreen></iframe>
+          </div>
+          <p class="muted">Complex arithmetic & polar form</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Class 12 -->
+    <section class="card">
+      <h2>Class 12 Topics</h2>
+      <ul>
+        <li><strong>Advanced polynomials:</strong> factorization techniques, remainder theorem applications, symmetric polynomials.</li>
+        <li><strong>Advanced matrices:</strong> inverse, rank, solving larger linear systems, eigenconcepts (intro).</li>
+        <li><strong>Determinants:</strong> properties, expansion, applications to area/volume and linear systems.</li>
+        <li><strong>Sequences and series (advanced):</strong> convergence tests, sum to infinity for GP, introduction to power series.</li>
+        <li><strong>Permutations and combinations:</strong> counting principles, binomial identities, basic probability connections.</li>
+      </ul>
+
+      <h3>Class 12 Video Lessons</h3>
+      <div class="video-row">
+        <div class="video">
+          <div class="responsive-iframe">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_ALG_12_1" title="Matrices and Determinants (Class 12)" allowfullscreen></iframe>
+          </div>
+          <p class="muted">Inverse matrices & solving systems</p>
+        </div>
+
+        <div class="video">
+          <div class="responsive-iframe">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_ALG_12_2" title="Advanced Polynomials & Series (Class 12)" allowfullscreen></iframe>
+          </div>
+          <p class="muted">Polynomials, series, and identities</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key formulas and identities -->
+    <section class="card">
+      <h2>Key Formulas and Identities</h2>
+      <table>
+        <tr>
+          <th>Topic</th>
+          <th>Formula / Identity</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Quadratic formula</td>
+          <td>\(x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</td>
+          <td>Use discriminant \(D=b^2-4ac\) to determine roots</td>
+        </tr>
+        <tr>
+          <td>Sum of roots (quadratic)</td>
+          <td>\(\alpha + \beta = -\dfrac{b}{a}\)</td>
+          <td>From \(ax^2+bx+c=0\)</td>
+        </tr>
+        <tr>
+          <td>Product of roots (quadratic)</td>
+          <td>\(\alpha\beta = \dfrac{c}{a}\)</td>
+          <td>From \(ax^2+bx+c=0\)</td>
+        </tr>
+        <tr>
+          <td>AP nth term & sum</td>
+          <td>\(a_n = a_1 + (n-1)d\); \(S_n = \dfrac{n}{2}(2a_1 + (n-1)d)\)</td>
+          <td>Arithmetic progressions</td>
+        </tr>
+        <tr>
+          <td>GP nth term & sum</td>
+          <td>\(a_n = a_1 r^{n-1}\); \(S_n = a_1 \dfrac{r^n - 1}{r - 1}\) (r≠1)</td>
+          <td>Geometric progressions</td>
+        </tr>
+        <tr>
+          <td>Binomial theorem</td>
+          <td>\((x+y)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} y^k\)</td>
+          <td>Valid for integer \(n\ge0\)</td>
+        </tr>
+        <tr>
+          <td>Determinant 2×2</td>
+          <td>\(\det\begin{pmatrix}a & b \\ c & d\end{pmatrix} = ad - bc\)</td>
+          <td>Used in area, inverse, Cramer's rule</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Examples and practice -->
+    <section class="card">
+      <h2>Examples and Practice Problems</h2>
+
+      <h3>Example 1 — Factorization</h3>
+      <p>Factorize \(x^3 - 6x^2 + 11x - 6\).</p>
+      <pre class="code">
+Step 1: Try integer roots 1,2,3
+f(1)=0 → (x-1) is a factor
+Divide polynomial by (x-1) → x^2 - 5x + 6
+Factor quadratic → (x-2)(x-3)
+Final: (x-1)(x-2)(x-3)
+      </pre>
+
+      <h3>Example 2 — Quadratic word problem</h3>
+      <p>Find two numbers whose sum is 13 and product is 40.</p>
+      <pre class="code">
+Let numbers be x and 13-x
+x(13-x)=40 → 13x - x^2 = 40 → x^2 -13x + 40 = 0
+Solve: Discriminant D = 169 - 160 = 9 → roots (13 ± 3)/2 → 8 and 5
+Numbers: 8 and 5
+      </pre>
+
+      <h3>Practice Set (with answers hidden)</h3>
+      <ol>
+        <li>Factorize \(x^2 + 5x + 6\).</li>
+        <li>Find sum of first 20 terms of AP with \(a_1=3\) and \(d=4\).</li>
+        <li>Solve system: \(2x + 3y = 7\), \(x - y = 1\).</li>
+        <li>Expand \((2x - 3)^3\) using binomial theorem.</li>
+      </ol>
+
+      <details>
+        <summary>Answers</summary>
+        <ol>
+          <li>\((x+2)(x+3)\)</li>
+          <li>\(S_{20} = \dfrac{20}{2}(2*3 + 19*4) = 10(6 + 76) = 820\)</li>
+          <li>From second eqn x = y + 1 → substitute: 2(y+1) + 3y = 7 → 5y + 2 = 7 → y = 1 → x = 2</li>
+          <li>\((2x - 3)^3 = 8x^3 - 36x^2 + 54x - 27\)</li>
+        </ol>
+      </details>
+    </section>
+
+    <!-- Videos summary and notes -->
+    <section class="card">
+      <h2>Video Resources and How to Use Them</h2>
+      <p class="muted">
+        Each class section above contains embedded lessons. Replace the placeholder video IDs with the YouTube lesson IDs you prefer. Embedded videos play on the page so students stay focused. For each topic, include one short conceptual video (8–15 minutes) and one worked-example video (10–20 minutes).
+      </p>
+
+      <h3>Quick embedding note</h3>
+      <p class="muted">
+        To embed a YouTube video use the URL format: <code>https://www.youtube.com/embed/VIDEO_ID</code>. Replace <code>VIDEO_ID</code> with the ID from the YouTube share link.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="card" style="text-align:center;">
+      <h2>Conclusion</h2>
+      <p>
+        This Algebra page gives a progressive path from Class 10 fundamentals to Class 12 advanced topics. Add more worked examples, practice sets, and replace video placeholders with curated lessons to make the page classroom-ready.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>

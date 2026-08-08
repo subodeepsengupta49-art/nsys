@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculus (Class 10–12)</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Basic page styling (add to your style.css or keep here) */
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 20px; background:#f4f6fb; color:#0b2545; line-height:1.6; }
+    header h1 { text-align:center; font-size:2rem; margin-bottom:10px;color:#051524; }
+    section { max-width:1000px; margin:18px auto; background:#fff; padding:18px; border-radius:8px; box-shadow:0 2px 8px rgba(10,20,40,0.06); }
+    h2 { margin-top:0; color:#07203a; }
+    ul { margin-left:1.1rem; }
+    table { width:100%; border-collapse:collapse; margin-top:12px; }
+    th, td { border:1px solid #e0e6ef; padding:10px; text-align:left; vertical-align:top; }
+    th { background:#0d6efd; color:#fff; }
+    .video-wrap { display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
+    .video { flex:1 1 320px; min-width:280px; }
+    .responsive-iframe { width:100%; height:0; padding-bottom:56.25%; position:relative; }
+    .responsive-iframe iframe { position:absolute; width:100%; height:100%; left:0; top:0; border:0; }
+    pre.example { background:#0b2545; color:#fff; padding:12px; border-radius:6px; overflow:auto; }
+    .note { font-size:0.95rem; color:#234; margin-top:8px; }
+    @media (max-width:600px) { body { padding:12px; } header h1 { font-size:1.4rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📘 Calculus (Class 10–12)</h1>
+  </header>
+
+  <section>
+    <h2>Introduction</h2>
+    <p>
+      Calculus studies change and accumulation. It begins with limits and continuity, then develops derivatives (instantaneous rate of change) and integrals (accumulated quantity). Calculus is essential for physics, engineering, data science, and advanced mathematics.
+    </p>
+  </section>
+
+  <section>
+    <h2>Class 10 Topics</h2>
+    <ul>
+      <li><strong>Basic idea of change:</strong> intuitive slope and rate of change from graphs and simple functions.</li>
+      <li><strong>Introduction to limits:</strong> understanding approaching values (informal).</li>
+      <li><strong>Simple derivatives (conceptual):</strong> slope of a straight line and slope of a curve at a point (graphical understanding).</li>
+      <li><strong>Applications:</strong> basic motion problems (speed as rate of change), simple maxima/minima ideas for real-life problems.</li>
+    </ul>
+    <h3>Class 10 Video</h3>
+    <div class="video-wrap">
+      <div class="video">
+        <div class="responsive-iframe">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_CLASS10" title="Calculus Intro for Class 10" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Class 11 Topics</h2>
+    <ul>
+      <li><strong>Limits and continuity:</strong> formal definition, one-sided limits, limit laws, continuity of functions.</li>
+      <li><strong>Definition of derivative:</strong> difference quotient and limit
+        <br />
+        <span class="note">Mathematically: \( f'(x) = \displaystyle\lim_{h\to 0} \frac{f(x+h)-f(x)}{h} \)</span>
+      </li>
+      <li><strong>Basic derivative rules:</strong> power rule, constant rule, sum/difference rules, product and quotient rules.</li>
+      <li><strong>Simple applications:</strong> tangent line, velocity from position, increasing/decreasing tests.</li>
+    </ul>
+    <h3>Class 11 Video</h3>
+    <div class="video-wrap">
+      <div class="video">
+        <div class="responsive-iframe">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_CLASS11" title="Limits and Derivatives (Class 11)" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Class 12 Topics</h2>
+    <ul>
+      <li><strong>Advanced derivatives:</strong> chain rule, implicit differentiation, higher order derivatives.</li>
+      <li><strong>Applications of derivatives:</strong> optimization (max/min), curve sketching, related rates, Newton's method.</li>
+      <li><strong>Integrals:</strong> antiderivatives, definite and indefinite integrals, Fundamental Theorem of Calculus.</li>
+      <li><strong>Techniques of integration:</strong> substitution, integration by parts, partial fractions (intro), numerical approximation.</li>
+      <li><strong>Applications of integrals:</strong> area under curve, volumes of revolution, work and accumulation problems.</li>
+      <li><strong>Connections to differential equations:</strong> simple separable ODEs and growth/decay models.</li>
+    </ul>
+    <h3>Class 12 Video</h3>
+    <div class="video-wrap">
+      <div class="video">
+        <div class="responsive-iframe">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_CLASS12" title="Calculus Advanced (Class 12)" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Formulas</h2>
+    <table>
+      <tr>
+        <th>Concept</th>
+        <th>Formula (plain)</th>
+        <th>Formula (LaTeX)</th>
+      </tr>
+      <tr>
+        <td>Limit (definition)</td>
+        <td>\(\lim_{x\to a} f(x) = L\)</td>
+        <td>\(\displaystyle \lim_{x\to a} f(x) = L\)</td>
+      </tr>
+      <tr>
+        <td>Derivative (definition)</td>
+        <td>\(f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}\)</td>
+        <td>\(\displaystyle f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}\)</td>
+      </tr>
+      <tr>
+        <td>Power rule</td>
+        <td>\(\frac{d}{dx}x^n = n x^{n-1}\)</td>
+        <td>\(\displaystyle \frac{d}{dx}x^n = n x^{n-1}\)</td>
+      </tr>
+      <tr>
+        <td>Product rule</td>
+        <td>\(\frac{d}{dx}[u v] = u'v + uv'\)</td>
+        <td>\(\displaystyle (uv)' = u'v + uv'\)</td>
+      </tr>
+      <tr>
+        <td>Quotient rule</td>
+        <td>\(\frac{d}{dx}\left(\frac{u}{v}\right)=\frac{u'v-uv'}{v^2}\)</td>
+        <td>\(\displaystyle \left(\frac{u}{v}\right)'=\frac{u'v-uv'}{v^2}\)</td>
+      </tr>
+      <tr>
+        <td>Chain rule</td>
+        <td>\(\frac{d}{dx}f(g(x)) = f'(g(x))\cdot g'(x)\)</td>
+        <td>\(\displaystyle (f\circ g)'(x)=f'(g(x))g'(x)\)</td>
+      </tr>
+      <tr>
+        <td>Fundamental Theorem (part 1)</td>
+        <td>\(\frac{d}{dx}\int_a^x f(t)\,dt = f(x)\)</td>
+        <td>\(\displaystyle \frac{d}{dx}\int_a^x f(t)\,dt = f(x)\)</td>
+      </tr>
+      <tr>
+        <td>Basic integrals</td>
+        <td>\(\int x^n dx = \frac{x^{n+1}}{n+1}+C\) (n≠−1)</td>
+        <td>\(\displaystyle \int x^n dx = \frac{x^{n+1}}{n+1}+C\)</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Examples and Worked Steps</h2>
+
+    <h3>Example 1 — Derivative (power rule)</h3>
+    <p>Find the derivative of \(f(x)=3x^4 - 5x^2 + 7x - 4\).</p>
+    <pre class="example">
+Step 1: Apply power rule term-by-term
+f'(x) = 3 * 4 x^3 - 5 * 2 x + 7 * 1
+f'(x) = 12x^3 - 10x + 7
+    </pre>
+
+    <h3>Example 2 — Chain rule</h3>
+    <p>Find derivative of \(y=\sin(3x^2+1)\).</p>
+    <pre class="example">
+Step 1: Outer derivative: cos(inner)
+Step 2: Multiply by inner derivative: d/dx(3x^2+1)=6x
+Result: y' = cos(3x^2+1) * 6x
+    </pre>
+
+    <h3>Example 3 — Definite integral (area)</h3>
+    <p>Compute \(\int_0^2 (2x+1)\,dx\).</p>
+    <pre class="example">
+Antiderivative: ∫(2x+1) dx = x^2 + x
+Evaluate from 0 to 2: (2^2 + 2) - (0 + 0) = 4 + 2 = 6
+    </pre>
+
+    <p class="note">
+      These examples show the standard steps students should practice: identify rule, apply algebra, simplify, and check units/limits where relevant.
+    </p>
+  </section>
+
+  <footer style="max-width:1000px;margin:18px auto;text-align:center;color:#234;">
+    <h2>Conclusion</h2>
+    <p>
+      This page gives a progressive path: Class 10 introduces the idea of change, Class 11 formalizes limits and derivatives, and Class 12 develops advanced techniques and applications. Embed real classroom videos by replacing the placeholder IDs with chosen YouTube lesson IDs.
+    </p>
+  </footer>
+</body>
+</html>

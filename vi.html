@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Video Library — SU80</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#0d6efd;
+      --muted:#55606a;
+      --text:#0b2545;
+      --radius:10px;
+      --shadow:0 6px 18px rgba(10,20,40,0.06);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);padding:18px}
+    header{max-width:1200px;margin:0 auto 18px;text-align:center}
+    header h1{margin:6px 0;font-size:1.8rem;color:#051524}
+    main{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:300px 1fr;gap:16px}
+    .panel{background:var(--card);padding:14px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .search{display:flex;gap:8px;margin-bottom:12px}
+    .search input{flex:1;padding:8px;border:1px solid #e6eef8;border-radius:6px}
+    .filters label{display:block;margin:6px 0;font-weight:600;color:var(--muted);font-size:0.95rem}
+    .tag{display:inline-block;background:#eef4ff;color:var(--accent);padding:6px 8px;border-radius:999px;font-size:0.85rem;margin:6px 6px 0 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+    .card{background:var(--card);border-radius:8px;padding:12px;box-shadow:0 4px 12px rgba(10,20,40,0.04);display:flex;flex-direction:column;gap:10px}
+    .meta{display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .meta .title{font-weight:700}
+    .meta .small{font-size:0.9rem;color:var(--muted)}
+    .responsive-iframe{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:6px;background:#000}
+    .responsive-iframe iframe{position:absolute;left:0;top:0;width:100%;height:100%;border:0}
+    .controls{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#fff;padding:8px 10px;border-radius:6px;text-decoration:none;font-weight:600;border:none;cursor:pointer}
+    .btn.secondary{background:#eef4ff;color:var(--accent)}
+    .empty{padding:18px;text-align:center;color:var(--muted)}
+    @media (max-width:900px){main{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SU80 Video Library</h1>
+    <p style="color:var(--muted);margin-top:6px">Curated lessons by topic and class level. Play videos on the site without leaving the page.</p>
+  </header>
+
+  <main>
+    <!-- Sidebar: search and filters -->
+    <aside class="panel" aria-label="Filters">
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Search by title, topic, tag, or teacher" />
+        <button id="clearBtn" class="btn secondary">Clear</button>
+      </div>
+
+      <div class="filters">
+        <label>Filter by Class</label>
+        <div>
+          <input type="checkbox" id="class10" data-filter="class" value="10" checked />
+          <label for="class10">Class 10</label>
+        </div>
+        <div>
+          <input type="checkbox" id="class11" data-filter="class" value="11" checked />
+          <label for="class11">Class 11</label>
+        </div>
+        <div>
+          <input type="checkbox" id="class12" data-filter="class" value="12" checked />
+          <label for="class12">Class 12</label>
+        </div>
+
+        <label style="margin-top:12px">Filter by Topic</label>
+        <div>
+          <input type="checkbox" id="topic-algebra" data-filter="topic" value="Algebra" checked />
+          <label for="topic-algebra">Algebra</label>
+        </div>
+        <div>
+          <input type="checkbox" id="topic-trigo" data-filter="topic" value="Trigonometry" checked />
+          <label for="topic-trigo">Trigonometry</label>
+        </div>
+        <div>
+          <input type="checkbox" id="topic-calculus" data-filter="topic" value="Calculus" checked />
+          <label for="topic-calculus">Calculus</label>
+        </div>
+        <div>
+          <input type="checkbox" id="topic-number" data-filter="topic" value="Number Systems" checked />
+          <label for="topic-number">Number Systems</label>
+        </div>
+
+        <label style="margin-top:12px">Sort</label>
+        <select id="sortSelect" style="width:100%;padding:8px;border-radius:6px;border:1px solid #e6eef8">
+          <option value="relevance">Relevance</option>
+          <option value="newest">Newest</option>
+          <option value="duration">Shortest first</option>
+        </select>
+      </div>
+    </aside>
+
+    <!-- Video grid -->
+    <section>
+      <div class="panel" style="margin-bottom:12px;display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <strong>Showing</strong> <span id="count">0</span> <span style="color:var(--muted)">videos</span>
+        </div>
+        <div class="controls">
+          <button id="showAll" class="btn secondary">Show All Topics</button>
+          <a href="#" class="btn" id="suggestBtn">Suggest a Video</a>
+        </div>
+      </div>
+
+      <div id="grid" class="grid" aria-live="polite">
+        <!-- Example video card. Duplicate and edit data attributes for each video -->
+        <article class="card" data-class="10" data-topic="Number Systems" data-tags="binary,conversion" data-duration="8" data-date="2024-05-10">
+          <div class="meta">
+            <div class="title">Binary Conversion Basics</div>
+            <div class="small">Class 10 • 8 min</div>
+          </div>
+          <div class="responsive-iframe">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/VIDEO_ID_NS_10_1" title="Binary Conversion Basics" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div style="color:var(--muted);font-size:0.95rem">Short guided lesson on converting decimal to binary with examples</div>
+          <div style="display:flex;gap:8px;justify-content:flex-end">
+            <button class="btn secondary" data-open="https://www.youtube.com/watch?v=VIDEO_ID_NS_10_1">Open on YouTube</button>
+          </div>
+        </article>
+
+        <article class="card" data-class="11" data-topic="Algebra" data-tags="quadratic,examples" data-duration="12" data-date="2024-06-02">
+          <div class="meta">
+            <div class="title">Quadratic Equations Worked Examples</div>
+            <div class="small">Class 11 • 12 min</div>
+          </div>
+          <div class="responsive-iframe">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/VIDEO_ID_ALG_11_1" title="Quadratic Equations Worked Examples" allowfullscreen></iframe>
+          </div>
+          <div style="color:var(--muted);font-size:0.95rem">Step-by-step solutions to common quadratic problems</div>
+          <div style="display:flex;gap:8px;justify-content:flex-end">
+            <button class="btn secondary" data-open="https://www.youtube.com/watch?v=VIDEO_ID_ALG_11_1">Open on YouTube</button>
+          </div>
+        </article>
+
+        <article class="card" data-class="12" data-topic="Calculus" data-tags="derivative,chain-rule" data-duration="15" data-date="2024-07-01">
+          <div class="meta">
+            <div class="title">Chain Rule and Examples</div>
+            <div class="small">Class 12 • 15 min</div>
+          </div>
+          <div class="responsive-iframe">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/VIDEO_ID_CALC_12_1" title="Chain Rule and Examples" allowfullscreen></iframe>
+          </div>
+          <div style="color:var(--muted);font-size:0.95rem">Clear explanation of chain rule with multiple examples</div>
+          <div style="display:flex;gap:8px;justify-content:flex-end">
+            <button class="btn secondary" data-open="https://www.youtube.com/watch?v=VIDEO_ID_CALC_12_1">Open on YouTube</button>
+          </div>
+        </article>
+
+        <!-- Add more cards here following the same structure -->
+      </div>
+
+      <div id="noResults" class="panel empty" style="display:none">No videos match your filters</div>
+    </section>
+  </main>
+
+  <script>
+    // Simple client-side search and filter
+    const grid = document.getElementById('grid');
+    const cards = Array.from(grid.querySelectorAll('.card'));
+    const searchInput = document.getElementById('searchInput');
+    const countEl = document.getElementById('count');
+    const clearBtn = document.getElementById('clearBtn');
+    const sortSelect = document.getElementById('sortSelect');
+    const noResults = document.getElementById('noResults');
+
+    function getActiveFilters(name){
+      return Array.from(document.querySelectorAll('[data-filter="'+name+'"]:checked')).map(i=>i.value);
+    }
+
+    function matches(card, q, classes, topics){
+      const text = (card.dataset.topic + ' ' + card.querySelector('.title').textContent + ' ' + card.dataset.tags).toLowerCase();
+      const classMatch = classes.includes(card.dataset.class);
+      const topicMatch = topics.includes(card.dataset.topic);
+      const queryMatch = q === '' || text.includes(q);
+      return classMatch && topicMatch && queryMatch;
+    }
+
+    function render(){
+      const q = searchInput.value.trim().toLowerCase();
+      const classes = getActiveFilters('class');
+      const topics = getActiveFilters('topic');
+      const sort = sortSelect.value;
+
+      let visible = 0;
+      let visibleCards = [];
+
+      cards.forEach(card=>{
+        if(matches(card,q,classes,topics)){
+          card.style.display = '';
+          visible++;
+          visibleCards.push(card);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Sorting
+      if(sort === 'duration'){
+        visibleCards.sort((a,b)=>Number(a.dataset.duration)-Number(b.dataset.duration));
+      } else if(sort === 'newest'){
+        visibleCards.sort((a,b)=>new Date(b.dataset.date) - new Date(a.dataset.date));
+      }
+
+      // Re-append in sorted order
+      visibleCards.forEach(c=>grid.appendChild(c));
+
+      countEl.textContent = visible;
+      noResults.style.display = visible === 0 ? '' : 'none';
+    }
+
+    // Event listeners
+    document.querySelectorAll('[data-filter]').forEach(cb=>cb.addEventListener('change', render));
+    searchInput.addEventListener('input', render);
+    sortSelect.addEventListener('change', render);
+    clearBtn.addEventListener('click', ()=>{
+      searchInput.value = '';
+      document.querySelectorAll('[data-filter]').forEach(cb=>cb.checked = true);
+      sortSelect.value = 'relevance';
+      render();
+    });
+
+    // Open on YouTube button
+    document.addEventListener('click', e=>{
+      const btn = e.target.closest('button[data-open]');
+      if(!btn) return;
+      const url = btn.getAttribute('data-open');
+      window.open(url, '_blank', 'noopener');
+    });
+
+    // Initial render
+    render();
+  </script>
+</body>
+</html>
